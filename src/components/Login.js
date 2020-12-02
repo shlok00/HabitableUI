@@ -142,7 +142,7 @@ class Log extends Component
       </div>
 
     </section>
-
+    <h1 style={{position:"absolute",top:"20px", textAlign:"center",fontSize:"40px", width:"100%", textShadow:"2px 2px #fc633d, -2px -2px #fffef2"}}>HabitAble</h1>
     </div>
 
 );
