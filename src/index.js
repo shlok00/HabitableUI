@@ -5,7 +5,7 @@ import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import axios from 'axios';
 
-axios.defaults.baseURL = 'http://habitable-productivityapp.herokuapp.com';
+axios.defaults.baseURL = 'https://habitable-productivityapp.herokuapp.com';
 
 ReactDOM.render(
   <React.StrictMode>
