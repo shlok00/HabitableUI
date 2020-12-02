@@ -99,7 +99,6 @@ class Log extends Component
     <div>
     <section>
       <div className="container">
-      <h3 className="glow">HabitAble</h3>
         <div className="user signinBx">
           <div className="imgBx">
           <img src={Logo} alt="" />
@@ -110,6 +109,8 @@ class Log extends Component
               <input type="text" name placeholder="Email"  onChange={event => this.email = event.target.value} />
               <input type="password" name placeholder="Password"  onChange={event => this.password = event.target.value} />
               <input type="submit" name value="Login" onClick={this.handleLoginSubmit}/>
+              <br/>
+              <input type="submit" name value="GO!" style={{background:"#10a608", color:"white"}}/>
               <input type="text" name placeholder="Enter Hash Code"  onChange={event => this.hash = event.target.value} />
               <input type="submit" name value="Verify" />
               <p className="signup">
@@ -139,6 +140,7 @@ class Log extends Component
           </div>
         </div>
       </div>
+
     </section>
 
     </div>
