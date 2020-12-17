@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import '../styles/login.css';
 import Logo from '../images/logos.png';
+import { Route, Link, BrowserRouter as Router, Switch, Redirect} from 'react-router-dom';
 import axios from 'axios';
+
+const rootElement = document.getElementById("root");
 
 
 class Log extends Component
@@ -52,7 +55,7 @@ class Log extends Component
         alert("Login Successful!");
         localStorage.setItem('email', JSON.stringify(this.email));
         localStorage.setItem('token', JSON.stringify(this.token));
-
+        document.getElementById('go').disabled = false;
       }
      }
    ).catch(error=>{if(error.status != 200){
@@ -63,8 +66,6 @@ class Log extends Component
 
 
 }
-
-
 
   handleSignupSubmit = (event) => {
     event.preventDefault();
@@ -110,12 +111,12 @@ class Log extends Component
               <input type="password" name placeholder="Password"  onChange={event => this.password = event.target.value} />
               <input type="submit" name value="Login" onClick={this.handleLoginSubmit}/>
               <br/>
-              <input type="submit" name value="GO!" style={{background:"#10a608", color:"white"}}/>
+              <Link to='/main'><input type="submit" id="go" name value="GO!" style={{background:"#10a608", color:"white"}} disabled/></Link>
               <input type="text" name placeholder="Enter Hash Code"  onChange={event => this.hash = event.target.value} />
               <input type="submit" name value="Verify" />
               <p className="signup">
                 Don't have an account ?
-                <a href="#" onClick={this.toggleForm}>Sign Up.</a>
+                <a onClick={this.toggleForm}>Sign Up.</a>
               </p>
             </form>
           </div>
@@ -142,7 +143,8 @@ class Log extends Component
       </div>
 
     </section>
-    <h1 style={{position:"absolute",top:"20px", textAlign:"center",fontSize:"40px", width:"100%", textShadow:"2px 2px #fc633d, -2px -2px #fffef2"}}>HabitAble</h1>
+    <h1 style={{position:"absolute",top:"3%", textAlign:"center",fontSize:"40px", width:"100%", textShadow:"2px 2px #fc633d, -2px -2px #573205"}}>HabitAble</h1>
+
     </div>
 
 );
