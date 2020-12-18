@@ -5,7 +5,7 @@ import { Route, Link, BrowserRouter as Router, Switch, Redirect} from 'react-rou
 import axios from 'axios';
 import $ from 'jquery';
 
-class Prof extends React.Component{
+class Task3 extends React.Component{
 
   componentDidMount(){
     $('.menu-toggle').click(function(){
@@ -41,7 +41,7 @@ return(
     <div className="grad-bar" />
 </div>
   </div>
-TUNAMAYO
+Bakaka?
   </div>
 );
 }
@@ -50,4 +50,4 @@ TUNAMAYO
 }
 
 
-export default Prof
+export default Task3

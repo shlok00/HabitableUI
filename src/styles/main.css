@@ -5,6 +5,44 @@
   font-family: 'Lato', 'Arial', sans-serif;
 
 }
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@border-size: 8px;
+
+#page {
+  max-width: 93%;
+  margin: auto;
+}
+
+.mcontainer {
+  margin: 20px;
+  margin-bottom: 0;
+  display: flex;
+  border: 1vw ridge #c2b68d;
+  box-shadow: 0px 0px 22px #fcfcc7;
+  background-color: #0000006b;
+  border-radius: 5vw;
+
+}
+
+.mbody {
+  padding-left: 21vw;
+  padding-right: 21vw;
+  padding-top: 2.5vw;
+  width: 94%;
+  background: transparent;
+  color: black;
+  font-family: georgia;
+  line-height: 1.5;
+  text-shadow: 0px 0px 22px #fcfcc7;
+
+}
+
+.mbody p{
+  font-size: 12.5vw;
+  text-align: center;
+  font-family: 'Satisfy', cursive;
+}
+
 
 /* HEADINGS */
 
@@ -20,7 +58,7 @@ h1 {
 
 h2 {
   color: #000;
-  font-size: 1.3rem;
+  font-size: 2.5vw;
   text-align: center;
   line-height: 2.4;
   margin-bottom: 20px;

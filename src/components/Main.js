@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import '../styles/main.css';
 import axios from 'axios';
 import Back from '../images/back.jpg';
@@ -22,6 +23,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import { SocialIcon } from 'react-social-icons';
 import $ from 'jquery';
+import moment from 'moment';
 
 
 var notnum = 0;
@@ -29,10 +31,24 @@ var token = localStorage.getItem('token');
 const tkx = JSON.parse(token);
 
 
-
-
-
 class Cont extends React.Component {
+  constructor() {
+        super()
+        this.state = {
+            time: moment().format('LTS'),
+            one: true,
+            two: false,
+            three: false,
+            four: false,
+            background: {
+                backgroundColor: "#fff"
+            },
+            class: ''
+        }
+
+    }
+
+
   componentDidMount() {
     AOS.init({
       duration: 1500
@@ -44,7 +60,18 @@ class Cont extends React.Component {
        $(this).toggleClass("is-active");
     });
 
-
+    setInterval(()=>{
+        if(this.state.one == true) {
+            this.setState({
+                time: moment().format('LTS')
+            })
+        }
+        else if(this.state.four == true){
+            this.setState({
+                time: moment().format('LT')
+            })
+        }
+    },1000)
   }
 
 
@@ -81,7 +108,7 @@ class Cont extends React.Component {
               <span className="bar" />
             </div>
             <ul className="nav no-search">
-              <li className="nav-item"><a href="#">HOME</a></li>
+              <li className="nav-item"><a href="/main">HOME</a></li>
               <li className="nav-item"><a onClick={this.TriggerOutlook}>FEEDBACK</a></li>
               <li className="nav-item"><a href="#">CONTACT US</a></li>
               <li className="nav-item"><a href="/profile">PROFILE</a></li>
@@ -91,38 +118,55 @@ class Cont extends React.Component {
           <div className="grad-bar" />
 
         </div>
-
+        <div id="mainpg">
         <section className="headline">
 
         <div  className="slider-container">
+        <div id="page">
+       <div className="mcontainer">
+       <div className="mbody">
+       <p>
+       HabitAble<br/>
+       <span style={{fontSize:"7vw", textAlign:"center",fontFamily: "'Satisfy', cursive"}}>&nbsp;&nbsp;{this.state.time}</span>
+       </p>
+       </div>
+       </div>
+
+       </div>
                </div>
+
         </section>
         <section className="features" style={{background:"#transparent"}}>
+
           <div className="feature-container" >
+          <a href="/taskmanager" style={{textDecoration:"none"}}>
             <img src={Back} alt="Flexbox Feature" />
             <h2 style={{background:"black", color:"white"}}>Task Manager</h2>
             <p>-Post New Tasks! < br / >
     -Edit Existing Tasks! < br / >
     -Schedule to Notify! < br / >
-    -Color Coded!</p>
+    -Color Coded!</p></a>
           </div>
           <div className="feature-container" >
+          <a href="/habittracker" style={{textDecoration:"none"}}>
             <img src={Back1} alt="Flexbox Feature"  />
             <h2 style={{background:"black", color:"white"}}>Habit Tracker</h2>
             <p>         -Track your Habits! < br / >
                         -Make New Streaks! < br / >
                         -Beautiful Graphs! < br / >
                         -Schedule your Day!  </p>
-          </div>
+          </a></div>
           <div className="feature-container" >
+          <a href="/challenges" style={{textDecoration:"none"}}>
             <img src={Back2} alt="Flexbox Feature" />
             <h2 style={{background:"black", color:"white"}}>Challenge-A-Friend!</h2>
             <p>-Compete with your Friends! < br / >
     -Create Challenging Tasks! < br / >
     -Who finished first? < br / ><br/>
     </p>
-          </div>
+          </a></div>
         </section>
+        </div>
       </div>
 
       </div>
