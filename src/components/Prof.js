@@ -24,7 +24,7 @@ return(
 <div className="page-wrapper">
   <div className="nav-wrapper">
     <nav className="navbar">
-      <h3 style={{paddingLeft: 10}}><a href="/main" style={{textDecoration:"none", color:"#e6cd2e"}}>HabitAble</a></h3>
+      <h3 style={{paddingLeft: 10}}><a href="/main" style={{textDecoration:"none", color:"#f2df9d",fontFamily: "'Satisfy', cursive"}}>HabitAble</a></h3>
       <div className="menu-toggle" id="mobile-menu">
         <span className="bar" />
         <span className="bar" />

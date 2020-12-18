@@ -94,14 +94,14 @@ class Cont extends React.Component {
 
   render() {
     return (
-      <div  style={{backgroundImage: `url(${Home0})`}}>
+      <div  style={{backgroundImage: `url(${Home0})`, backgroundRepeat:"repeat"}}>
       <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
       <div className="page-wrapper">
         <div className="nav-wrapper">
           <nav className="navbar">
-            <h3 style={{paddingLeft: 10}}><a href="/main" style={{textDecoration:"none", color:"#e6cd2e"}}>HabitAble</a></h3>
+            <h3 style={{paddingLeft: 10}}><a href="/main" style={{textDecoration:"none", color:"#f2df9d",fontFamily: "'Satisfy', cursive"}}>HabitAble</a></h3>
             <div className="menu-toggle" id="mobile-menu">
               <span className="bar" />
               <span className="bar" />
@@ -127,7 +127,7 @@ class Cont extends React.Component {
        <div className="mbody">
        <p>
        HabitAble<br/>
-       <span style={{fontSize:"7vw", textAlign:"center",fontFamily: "'Satisfy', cursive"}}>&nbsp;&nbsp;{this.state.time}</span>
+       <span style={{fontSize:"7.5vw", textAlign:"center",fontFamily: "'Satisfy', cursive"}}>{this.state.time}</span>
        </p>
        </div>
        </div>
@@ -166,6 +166,21 @@ class Cont extends React.Component {
     </p>
           </a></div>
         </section>
+        <div id="page">
+       <div className="mcontainer" style={{marginBottom:"0px", marginTop:"70px", border:"none", borderRadius:"0"}}>
+       <div className="mbody" style={{marginLeft:"-20px"}}>
+       <p style={{fontSize:"6.5vw", textShadow:"2px 2px #000", textAlign:"left"}}>
+       About Us<br/>
+       <p style={{fontSize:"3vw", textAlign:"justify",fontFamily: "arial"}}>HabitAble is in an initiative started by two coding buddies
+       who aim to make task management and tracking of habits, schedules and routines not only simple, but efficient, interactive and fun!
+       By making use of this app, we want to encourage people to be more focused, productive and disciplined as it is the need of the hour for developing population experiencing lower attention span
+        and poor time management skills. <br/><br/>
+       </p>
+       </p>
+       </div>
+       </div>
+
+       </div>
         </div>
       </div>
 

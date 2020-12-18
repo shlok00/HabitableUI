@@ -15,7 +15,7 @@
 
 .mcontainer {
   margin: 20px;
-  margin-bottom: 0;
+  margin-bottom: 50px;
   display: flex;
   border: 1vw ridge #c2b68d;
   box-shadow: 0px 0px 22px #fcfcc7;
@@ -25,8 +25,8 @@
 }
 
 .mbody {
-  padding-left: 21vw;
-  padding-right: 21vw;
+  padding-left: 16vw;
+  padding-right: 18vw;
   padding-top: 2.5vw;
   width: 94%;
   background: transparent;
@@ -41,6 +41,7 @@
   font-size: 12.5vw;
   text-align: center;
   font-family: 'Satisfy', cursive;
+  width: 60vw;
 }
 
 
