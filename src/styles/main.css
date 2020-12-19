@@ -24,8 +24,7 @@
 }
 
 .our-team {
-  padding: 30px 0 90px;
-  margin-bottom: 30px;
+  margin: 20px;
   background-color: #000000a6;
   text-align: center;
   overflow: hidden;
@@ -161,9 +160,10 @@
 
 .mbody p{
   font-size: 12.5vw;
-  text-align: center;
+  text-align: justify;
   font-family: 'Satisfy', cursive;
   width: 60vw;
+
 }
 
 
@@ -189,8 +189,11 @@ h2 {
 
 /* BASIC SETUP */
 
+.whole{
+  width: 100.5%;
+
+}
 .page-wrapper {
-  width: auto;
   height: auto;
 }
 
@@ -248,6 +251,7 @@ h2 {
   background: #e6cd2e;
   font-weight: bold;
   color: black;
+  text-decoration: none;
 }
 
 /* SECTIONS */

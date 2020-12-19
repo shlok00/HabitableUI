@@ -94,7 +94,7 @@ class Cont extends React.Component {
 
   render() {
     return (
-      <div  style={{backgroundImage: `url(${Home0})`, backgroundRepeat:"repeat"}}>
+      <div class="whole" style={{backgroundImage: `url(${Home0})`, backgroundRepeat:"repeat"}}>
       <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
@@ -112,7 +112,7 @@ class Cont extends React.Component {
             </div>
             <ul className="nav no-search">
               <li className="nav-item"><a href="/main">HOME</a></li>
-              <li className="nav-item"><a onClick={this.TriggerOutlook}>FEEDBACK</a></li>
+              <li className="nav-item"><a href="#" onClick={this.TriggerOutlook}>FEEDBACK</a></li>
               <li className="nav-item"><a href="#">CONTACT US</a></li>
               <li className="nav-item"><a href="/profile">PROFILE</a></li>
               <li className="nav-item"><a href="/">LOGOUT</a></li>
@@ -124,19 +124,18 @@ class Cont extends React.Component {
         <div id="mainpg">
         <section className="headline">
 
-        <div  className="slider-container">
         <div id="page">
        <div className="mcontainer">
        <div className="mbody">
        <p>
        HabitAble<br/>
-       <span style={{fontSize:"7.5vw", textAlign:"center",fontFamily: "'Satisfy', cursive"}}>{this.state.time}</span>
+       <span style={{fontSize:"7.5vw",marginLeft:"7vw",fontFamily: "'Satisfy', cursive"}}>{this.state.time}</span>
        </p>
        </div>
        </div>
 
        </div>
-               </div>
+
 
         </section>
         <section className="features" style={{background:"#transparent"}}>
@@ -200,7 +199,7 @@ class Cont extends React.Component {
        </div>
        <div className="team-content">
          <h3 className="name"  style={{fontFamily: "Papyrus, Fantasy", fontWeight:"bold"}}>Shlok Naik</h3>
-         <h4 className="title"  style={{fontFamily: "Papyrus, Fantasy", fontWeight:"bold"}}>Frontend Developer</h4>
+         <h4 className="title"  style={{fontFamily: "Papyrus, Fantasy", fontWeight:"bold"}}>Frontend Developer<br/><br/><br/><br/></h4>
        </div>
        <ul className="social">
          <li><a href="https://codepen.io/collection/XdWJOQ/" className="fab fa-instagram" aria-hidden="true" /></li>
@@ -215,7 +214,7 @@ class Cont extends React.Component {
        </div>
        <div className="team-content" >
          <h3 className="name"  style={{fontFamily: "Papyrus, Fantasy", fontWeight:"bold"}}>Shabarish Ramaswamy</h3>
-         <h4 className="title"  style={{fontFamily: "Papyrus, Fantasy", fontWeight:"bold"}}>Backend Developer</h4>
+         <h4 className="title"  style={{fontFamily: "Papyrus, Fantasy", fontWeight:"bold"}}>Backend Developer<br/><br/><br/><br/></h4>
        </div>
        <ul className="social">
          <li><a href="https://codepen.io/collection/XdWJOQ/" className="fab fa-instagram" aria-hidden="true"/></li>
