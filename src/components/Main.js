@@ -126,7 +126,7 @@ class Cont extends React.Component {
 
         <div id="page">
        <div className="mcontainer">
-       <div className="mbody" style={{marginLeft:"-5vw"}}>
+       <div className="mbody" style={{marginLeft:"-5%"}}>
        <p>
        HabitAble
        <span style={{fontSize:"1.5vw", textShadow:"0px 0px 20px #f7e6ad", fontFamily:"'Chakra Petch', sans-serif"}}> <br/>SCHEDULE. CREATE. REPEAT.<br/></span>
