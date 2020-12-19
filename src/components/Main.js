@@ -98,6 +98,9 @@ class Cont extends React.Component {
       <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossOrigin="anonymous" />
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossOrigin="anonymous" />
+
       <div className="page-wrapper">
         <div className="nav-wrapper">
           <nav className="navbar">
@@ -167,11 +170,12 @@ class Cont extends React.Component {
           </a></div>
         </section>
         <div id="page">
-       <div className="mcontainer" style={{marginBottom:"0px", marginTop:"70px", border:"none", borderRadius:"0"}}>
+       <div className="mcontainer" style={{marginBottom:"0px", marginTop:"66px", border:"none",
+        boxShadow: "0px 0px 22px #fcfcc7, inset 0px 0px 22px  #fcfcc7", padding:"10px"}}>
        <div className="mbody" style={{marginLeft:"-20px"}}>
-       <p style={{fontSize:"6.5vw", textShadow:"2px 2px #000", textAlign:"left"}}>
+       <p style={{fontSize:"4.5vw", textShadow:"1px 2px #000", textAlign:"left"}}>
        About Us<br/>
-       <p style={{fontSize:"3vw", textAlign:"justify",fontFamily: "arial"}}>HabitAble is in an initiative started by two coding buddies
+       <p style={{fontSize:"3vw", textAlign:"justify",fontFamily: "Papyrus, Fantasy"}}>HabitAble is in an initiative started by two coding buddies
        who aim to make task management and tracking of habits, schedules and routines not only simple, but efficient, interactive and fun!
        By making use of this app, we want to encourage people to be more focused, productive and disciplined as it is the need of the hour for developing population experiencing lower attention span
         and poor time management skills. <br/><br/>
@@ -181,9 +185,47 @@ class Cont extends React.Component {
        </div>
 
        </div>
+
         </div>
       </div>
-
+      <div class="cbody">
+      <div className="container">
+      <p style={{fontSize:"4.5vw", textShadow:"1px 2px #c9b36b", textAlign:"center", borderBottom:"1px solid #c9b36b"}}><br/><br/>
+      Contact Us<br/></p>
+      <div className="row">
+      <div className="col-12 col-sm-6 ">
+      <div className="our-team">
+       <div className="picture">
+         <img className="img-fluid" src={Sho} />
+       </div>
+       <div className="team-content">
+         <h3 className="name"  style={{fontFamily: "Papyrus, Fantasy", fontWeight:"bold"}}>Shlok Naik</h3>
+         <h4 className="title"  style={{fontFamily: "Papyrus, Fantasy", fontWeight:"bold"}}>Frontend Developer</h4>
+       </div>
+       <ul className="social">
+         <li><a href="https://codepen.io/collection/XdWJOQ/" className="fab fa-instagram" aria-hidden="true" /></li>
+         <li><a href="https://codepen.io/collection/XdWJOQ/" className="fab fa-github" aria-hidden="true" /></li>
+       </ul>
+      </div>
+      </div>
+      <div className="col-12 col-sm-6">
+      <div className="our-team">
+       <div className="picture">
+         <img className="img-fluid" src={Shab} />
+       </div>
+       <div className="team-content" >
+         <h3 className="name"  style={{fontFamily: "Papyrus, Fantasy", fontWeight:"bold"}}>Shabarish Ramaswamy</h3>
+         <h4 className="title"  style={{fontFamily: "Papyrus, Fantasy", fontWeight:"bold"}}>Backend Developer</h4>
+       </div>
+       <ul className="social">
+         <li><a href="https://codepen.io/collection/XdWJOQ/" className="fab fa-instagram" aria-hidden="true"/></li>
+         <li><a href="https://codepen.io/collection/XdWJOQ/" className="fab fa-github" aria-hidden="true" /></li>
+       </ul>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       </div>
     );
   }
