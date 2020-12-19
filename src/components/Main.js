@@ -189,7 +189,7 @@ class Cont extends React.Component {
       </div>
       <div class="cbody">
       <div className="container">
-      <p style={{fontSize:"4.5vw", textShadow:"1px 2px #c9b36b", textAlign:"center", borderBottom:"1px solid #c9b36b"}}><br/><br/>
+      <p style={{fontSize:"4.5vw", textShadow:"1px 2px #c9b36b", textAlign:"center", borderBottom:"1px solid #c9b36b"}}><br/>
       Contact Us<br/></p>
       <div className="row">
       <div className="col-12 col-sm-6 ">
@@ -202,8 +202,8 @@ class Cont extends React.Component {
          <h4 className="title"  style={{fontFamily: "Papyrus, Fantasy", fontWeight:"bold"}}>Frontend Developer<br/><br/><br/><br/></h4>
        </div>
        <ul className="social">
-         <li><a href="https://codepen.io/collection/XdWJOQ/" className="fab fa-instagram" aria-hidden="true" /></li>
-         <li><a href="https://codepen.io/collection/XdWJOQ/" className="fab fa-github" aria-hidden="true" /></li>
+         <li><a href="https://www.instagram.com/spacejamart/?hl=en" className="fab fa-instagram" aria-hidden="true" /></li>
+         <li><a href="https://www.github.com/shlok00/" className="fab fa-github" aria-hidden="true" /></li>
        </ul>
       </div>
       </div>
@@ -217,8 +217,8 @@ class Cont extends React.Component {
          <h4 className="title"  style={{fontFamily: "Papyrus, Fantasy", fontWeight:"bold"}}>Backend Developer<br/><br/><br/><br/></h4>
        </div>
        <ul className="social">
-         <li><a href="https://codepen.io/collection/XdWJOQ/" className="fab fa-instagram" aria-hidden="true"/></li>
-         <li><a href="https://codepen.io/collection/XdWJOQ/" className="fab fa-github" aria-hidden="true" /></li>
+         <li><a href="https://www.instagram.com/shabarishramaswamy/?hl=en/" className="fab fa-instagram" aria-hidden="true"/></li>
+         <li><a href="https://www.github.com/ShabarishRamaswamy/" className="fab fa-github" aria-hidden="true" /></li>
        </ul>
       </div>
       </div>
