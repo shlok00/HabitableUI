@@ -126,10 +126,11 @@ class Cont extends React.Component {
 
         <div id="page">
        <div className="mcontainer">
-       <div className="mbody">
+       <div className="mbody" style={{marginLeft:"-5vw"}}>
        <p>
-       HabitAble<br/>
-       <span style={{fontSize:"7.5vw",marginLeft:"7vw",fontFamily: "'Satisfy', cursive"}}>{this.state.time}</span>
+       HabitAble
+       <span style={{fontSize:"1.5vw", textShadow:"0px 0px 20px #f7e6ad", fontFamily:"'Chakra Petch', sans-serif"}}> <br/>SCHEDULE. CREATE. REPEAT.<br/></span>
+       <span style={{fontSize:"3.5vw",fontFamily: "'Satisfy', cursive"}}>{this.state.time}</span>
        </p>
        </div>
        </div>

@@ -8,6 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 @border-size: 8px;
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap');
 
 .cbody {
   font-family: 'Satisfy', cursive;
@@ -160,8 +161,8 @@
 }
 
 .mbody p{
-  font-size: 12.5vw;
-  text-align: justify;
+  font-size: 8.5vw;
+margin-left: -2vw;
   font-family: 'Satisfy', cursive;
   width: 60vw;
 
