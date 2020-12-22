@@ -126,11 +126,11 @@ class Cont extends React.Component {
 
         <div id="page">
        <div className="mcontainer">
-       <div className="mbody" style={{marginLeft:"-5%"}}>
+       <div className="mbody">
        <p>
        HabitAble
        <span style={{fontSize:"1.5vw", textShadow:"0px 0px 20px #f7e6ad", fontFamily:"'Chakra Petch', sans-serif"}}> <br/>SCHEDULE. CREATE. REPEAT.<br/></span>
-       <span style={{fontSize:"3.5vw",fontFamily: "'Satisfy', cursive"}}>{this.state.time}</span>
+       <span style={{fontSize:"6.5vw",fontFamily: "'Satisfy', cursive"}}>{this.state.time}</span>
        </p>
        </div>
        </div>
@@ -214,7 +214,8 @@ class Cont extends React.Component {
          <img className="img-fluid" src={Shab} />
        </div>
        <div className="team-content" >
-         <h3 className="name"  style={{fontFamily: "Papyrus, Fantasy", fontWeight:"bold"}}>Shabarish Ramaswamy</h3>
+         <h3 className="name"  style={{fontFamily: "Papyrus, Fantasy", fontWeight:"bold"
+}}>Shabarish Ramaswamy</h3>
          <h4 className="title"  style={{fontFamily: "Papyrus, Fantasy", fontWeight:"bold"}}>Backend Developer<br/><br/><br/><br/></h4>
        </div>
        <ul className="social">
