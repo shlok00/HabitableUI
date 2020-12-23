@@ -112,6 +112,14 @@ class Cont extends React.Component {
             </div>
             <ul className="nav no-search">
               <li className="nav-item"><a href="/main">HOME</a></li>
+              <li className="nav-item">
+              <a>
+              <select name="track" id="track" >
+  <option value="/taskmanager">TASKS</option>
+  <option value="/habittracker">HABITS</option>
+  <option value="/challenges">CHALLENGES</option>
+</select></a>
+ </li>
               <li className="nav-item"><a href="#" onClick={this.TriggerOutlook}>FEEDBACK</a></li>
               <li className="nav-item"><a href="#">CONTACT US</a></li>
               <li className="nav-item"><a href="/profile">PROFILE</a></li>

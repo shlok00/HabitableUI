@@ -231,7 +231,7 @@ h2 {
 .navbar ul {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(5,150px);
+  grid-template-columns: repeat(6,150px);
   justify-self: end;
 
 }
@@ -249,6 +249,20 @@ h2 {
 }
 
 .nav-item a:hover {
+  cursor: pointer;
+  background: #e6cd2e;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+.nav-item select{
+  color: #e6cd2e;
+  background:black;
+  border:none;
+  margin-left:-20px;
+}
+.nav-item:hover select{
   cursor: pointer;
   background: #e6cd2e;
   font-weight: bold;
