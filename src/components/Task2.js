@@ -361,81 +361,10 @@ return(
   </select>
   <div className="hbbutton" style={{background:"#494ea3", float:"left"}} data-name="del-btn">Delete!</div>
 </form>
+<br/><br/><br/><br/>
 </div>
 
-  <div className="input-group">
-        <div className="input-group-prepend">
-        <br/><br/><br/><br/>
-            <span className="input-group-text"  style={{background: "#60397d", color: "white", borderColor: "transparent"}}>New Habit: </span>
-          </div>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="What will you do today?"
-            data-name="hab-input"
-            onChange = {event => {habitvalue = event.target.value; console.log(habitvalue);}}
-            style={{border:"3.5px solid #60397d"}}
 
-          />
-          <div className="input-group-append">
-            <button className="btn btn-success" data-name="add-bt" style={{background: "#60397d", height: "38px", border: "1px solid #60397d", marginTop:"-96px", marginLeft:"350px"}}>
-              Add
-            </button>
-          </div>
-        </div>
-    <div className="input-group" style={{maxWidth:"350px", marginLeft: "20px", marginTop: "180px", position: "fixed"}}>
-          <div className="input-group-prepend">
-          <br/><br/><br/><br/>
-            <span className="input-group-text"  style={{background: "#ba3c5d", color: "white", borderColor: "transparent", height: "38px", width:"125px" }}>Habit Streak! </span>
-          </div>
-          <select
-            className="form-control"
-            id="habstreak"
-            style={{border:"3.5px solid #ba3c5d"}}
-            >
-
-            </select>
-          <div className="input-group-append">
-            <button className="btn btn-success" data-name="upd-btn" style={{background: "#ba3c5d", height: "38px", border: "1px solid #ba3c5d", marginTop:"-96px", marginLeft:"350px"}}>
-              Add
-            </button>
-          </div>
-        </div>
-        <div className="input-group" style={{maxWidth:"350px", marginLeft: "20px", marginTop: "240px", position: "fixed"}}>
-              <div className="input-group-prepend">
-              <br/><br/><br/><br/>
-                <span className="input-group-text"  style={{background: "#cf59ad", color: "white", borderColor: "transparent", height: "38px", }}>Delete Streak! </span>
-              </div>
-              <select
-                className="form-control"
-                id="delhabstreak"
-                style={{border:"3.5px solid #cf59ad"}}
-                   >
-                </select>
-              <div className="input-group-append">
-                <button className="btn btn-success" data-name="delh-btn" style={{background: "#cf59ad", height: "38px", border: "1px solid #cf59ad", marginTop:"-96px", marginLeft:"350px"}}>
-                  Delete
-                </button>
-              </div>
-            </div>
-        <div className="input-group" style={{maxWidth:"350px", marginLeft: "20px", marginTop: "300px", position: "fixed"}}>
-              <div className="input-group-prepend">
-              <br/><br/><br/><br/>
-                <span className="input-group-text"  style={{background: "#494ea3", color: "white", borderColor: "transparent", height: "38px", width:"125px" }}>Delete Habit: </span>
-              </div>
-              <select
-                className="form-control"
-                id="delhab"
-                style={{border:"3.5px solid #494ea3"}}
-
-                >
-                </select>
-              <div className="input-group-append">
-                <button className="btn btn-success" data-name="del-btn" style={{background: "#494ea3", height: "38px", border: "1px solid #494ea3", marginTop:"-96px", marginLeft:"350px"}}>
-                  Delete
-                </button>
-              </div>
-            </div>
 </div>
     </div>
     <div className="hbcolumn">
