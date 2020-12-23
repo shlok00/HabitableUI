@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import '../styles/prof.css';
+import '../styles/profi.css';
 import '../styles/main.css';
 import { Route, Link, BrowserRouter as Router, Switch, Redirect} from 'react-router-dom';
 import axios from 'axios';
