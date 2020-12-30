@@ -116,7 +116,7 @@ render(){
 
 return(
   <div>
-  <main>
+
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
@@ -140,7 +140,8 @@ return(
     <div className="grad-bar" />
 </div>
   </div>
-<section style={{backgroundRepeat:"repeat-y", backgroundImage:"url('https://images.pexels.com/photos/2129796/pexels-photo-2129796.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')"}}>
+  <main>
+  <section style={{backgroundRepeat:"repeat-y", backgroundImage:"url('https://images.pexels.com/photos/2129796/pexels-photo-2129796.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')"}}>
 <br/>
 <div className="chcontainer">
   <div className="chbox cha">
@@ -148,7 +149,7 @@ return(
       <div className="chtext-wrapper">
       <form>
     <a style={{background:"#befc62", color:"black", paddingLeft:"70px", paddingRight:"70px", paddingTop:"10px", paddingBottom:"10px",
-     width:"70%", boxShadow:"0px 0px 20px #befc62", borderRadius:"10px", fontWeight:"bold", textAlign:"center"}}>CHALLENGE MAKER</a>
+     width:"95%", boxShadow:"0px 0px 20px #befc62", borderRadius:"10px", fontWeight:"bold", textAlign:"center"}}>CHALLENGE MAKER</a>
      <br/>
       <input type="text" id="tas-input" placeholder="Add task for challenge"  onChange = {event => {chaltask = event.target.value;}}/><br/>
       <input type="submit" data-name="add1-bt" value="ADD TASK"
@@ -157,7 +158,7 @@ return(
       <div className="habitinput"
       style={{
         height:"auto",
-        width:"70%",
+        width:"90%",
         padding:"20px",
         color:"white",
         marginBottom:"20px",
@@ -178,7 +179,7 @@ return(
       <div className="chtext-wrapper">
       <form>
     <a style={{background:"#befc62", color:"black", paddingLeft:"70px", paddingRight:"70px", paddingTop:"10px", paddingBottom:"10px",
-     width:"70%", boxShadow:"0px 0px 20px #befc62", borderRadius:"10px", fontWeight:"bold", textAlign:"center"}}>CHALLENGE ACCEPTED!</a>
+     width:"95%", boxShadow:"0px 0px 20px #befc62", borderRadius:"10px", fontWeight:"bold", textAlign:"center"}}>CHALLENGE ACCEPTED!</a>
      <br/>
       <input type="text" id="tas-input1" placeholder="Enter your code"  onChange={event => this.email = event.target.value} /><br/>
       <input type="submit" data-name="add2-bt" value="GET TASKS!"
@@ -186,7 +187,7 @@ return(
       <br/><br/>
       <div className="habitinput" style={{
         height:"auto",
-        width:"70%",
+        width:"90%",
         padding:"20px",
         fontWeight:"bold",
         color:"red",

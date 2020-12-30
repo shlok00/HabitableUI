@@ -46,47 +46,13 @@ background-repeat: repeat-y;
       min-height: 50vh;
     }
       .chbox {
-        position: relative;
-        width: 40%;
-        height: 50%;
-      }
-      .chbox:before {
-        content: "";
-        display: block;
-        padding-top: 50%;
+        width: 48%;
+        min-height: 80vh;
       }
         .chcolumn {
-          position: absolute;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          right: 0;
-          width: 100%;
+                  min-height: 60vh;
         }
           .chtext-wrapper {
             padding: 25px 25px;
-          }
-
-  }
-
-
-  @media (min-width: 760px) {
-    .chcontainer {
-      height: 80vh;
-    }
-      .chbox {
-        width: 49%;
-        height: 100%;
-      }
-
-        .chcolumn {
-          height: 100%;
         }
   }
-
-@media (min-width: 1300px) {
-  .chcontainer {
-    min-height: 80vh;
-    max-height: none;
-  }
-}
