@@ -1,0 +1,92 @@
+
+.chalwrapper{
+background-image: url('https://images.pexels.com/photos/2129796/pexels-photo-2129796.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+background-repeat: repeat-y;
+}
+
+
+.chcontainer {
+  padding: 10px;
+  height: auto;
+}
+.chbox {
+  float: left;  margin: 5px; border-radius: 10px;
+}
+.chbox.cha .chcolumn { background-color: #000000bd;border-radius: 10px;
+ }
+.chbox.chb .chcolumn { background-color: #000000bd;border-radius: 10px;
+ }
+
+@media (max-width: 479px) {
+    .chcontainer {
+      width: 100%;
+      min-height: 80vh;
+     }
+     .chbox {
+       width: 100%;
+     }
+     .chbox:before {
+        content: none;
+     }
+
+       .chcolumn {
+         display: block;
+         min-height: 60vh;
+         margin-top: 60px;
+       }
+        .chtext-wrapper {
+          padding: 65px 15px;
+        }
+  }
+
+
+  @media (min-width: 480px) {
+    .chcontainer {
+      width: 100%;
+      min-height: 50vh;
+    }
+      .chbox {
+        position: relative;
+        width: 40%;
+        height: 50%;
+      }
+      .chbox:before {
+        content: "";
+        display: block;
+        padding-top: 50%;
+      }
+        .chcolumn {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+        }
+          .chtext-wrapper {
+            padding: 25px 25px;
+          }
+
+  }
+
+
+  @media (min-width: 760px) {
+    .chcontainer {
+      height: 80vh;
+    }
+      .chbox {
+        width: 49%;
+        height: 100%;
+      }
+
+        .chcolumn {
+          height: 100%;
+        }
+  }
+
+@media (min-width: 1300px) {
+  .chcontainer {
+    min-height: 80vh;
+    max-height: none;
+  }
+}

@@ -136,7 +136,7 @@ class Log extends Component
               </p>
             </form>
           </div>
-          <div className="imgBx">          <img src={Logo} alt="" />
+          <div className="imgBx">  <img src={Logo} alt="" />
 
           </div>
         </div>

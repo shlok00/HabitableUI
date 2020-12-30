@@ -95,7 +95,7 @@
 /* Create four equal columns that floats next to each other */
 .hbcolumn {
   float: left;
-  width: 45%;
+  width: 49%;
   margin-top: 10px;
   padding: 10px;
 }
