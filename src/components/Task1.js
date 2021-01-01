@@ -10,7 +10,8 @@ import $ from 'jquery';
 
 var token = localStorage.getItem('token');
 const tkx = JSON.parse(token);
-
+var main;
+var task;
 
 class Task1 extends React.Component{
 
@@ -29,14 +30,13 @@ class Task1 extends React.Component{
     }
 
   componentDidMount(){
-
-    const main = document.querySelector("main");
+    main = document.querySelector("main");
      var a = 1;
      axios.post('/tasks', tkx).then(response=>{ localStorage.setItem('taskdata',JSON.stringify(response.data)); console.log(response.data);}
    ).catch(error=>{console.log(error.status); console.log(tkx)});
 
    var tsks = localStorage.getItem('taskdata');
-     var task = JSON.parse(tsks);
+     task = JSON.parse(tsks);
 
      for (var i=0; i<task.tasks.length; i++)
      {
@@ -109,7 +109,7 @@ class Task1 extends React.Component{
      <input type="date" id="sched" value="${task.tasks[i].scheduled}"  contenteditable="true" style="width:55%;
                border:1px solid white; border-radius:10px; height:25px;"/>
       <input type="color" id="favcolor"  name="favcolor"  contenteditable="true"
-      style="height:30px; outline: none; border: none; padding:0; margin-left:25%; width:30px; border-radius:50%; overflow: visible;"
+      style="height:30px; padding: 3px; margin-left:25%; width:30px;"
       onchange="document.getElementById('${task.tasks[i]._id}').style.background = value" />
       <br/><br/>
       <input type="submit" value="UPDATE" data-name="edit-btn"
@@ -195,8 +195,7 @@ class Task1 extends React.Component{
    }
 
    main.addEventListener("click", (e) => {
-    e.preventDefault();
-    if (e.target.tagName === "INPUT") {
+    if (e.target.tagName === 'INPUT') {
       const name = e.target.getAttribute('data-name');
       if (name === "add-btn") {
         const todoInput1 = main.querySelector('[data-name="todo-input"]');
@@ -229,7 +228,7 @@ class Task1 extends React.Component{
                  color:white;
                  margin-bottom:20px;
                  border:none;
-                 background:#54ab9e;">
+                 background:#233d54">
              <div class="habitinput"
              id = "title"
              contenteditable="true"
@@ -243,7 +242,19 @@ class Task1 extends React.Component{
                margin-bottom:20px;
                background:#0c4746;
                box-shadow:3px 3px 7px #000;">Title</div>
-
+               <div class="habitinput"
+               name="remove-btn"
+               style="
+                 height:25px;
+                 width:25px;
+                 padding:5px;
+                 color:white;
+                 border:none;
+                 background:green;
+                 float:right;
+                 cursor:pointer;
+                 margin-top:-50px;
+                 box-shadow:3px 3px 7px #000;">X</div>
              <div className="habitinput"
              id="desc"
              contenteditable="true"
@@ -268,10 +279,10 @@ class Task1 extends React.Component{
                background:transparent;
                text-align:left;
              ">
-            <input type="text" id="sched" value="${task.tasks[i].scheduled}"   contenteditable="true" style="width:55%;
+            <input type="text" id="sched" value="2021-01-01"   contenteditable="true" style="width:55%;
                       border:1px solid white; border-radius:10px; height:25px;"/>
-             <input type="text" id="favcolor" name="favcolor"  contenteditable="true"
-             style="height:30px; border-radius: 0; margin-left:25%;width:15%;"
+             <input type="color" id="favcolor" name="favcolor"  contenteditable="true"
+             style="height:30px; padding: 3px;margin-left:25%;width:15%;"
              onchange="document.getElementById('${tmpid}').style.background = value" />
              <br/><br/>
              <input type="submit" value="UPDATE" data-name="edit-btn"
@@ -285,23 +296,90 @@ class Task1 extends React.Component{
               const todosList1 = main.querySelector('[data-name="todos-list"]');
               todosList1.insertAdjacentHTML("beforeend", template2);
               todoInput1.value = "";
-              window.location.reload();
-              window.location.reload();
           }
         ).catch(error=>{ if(error.status === 500){alert("Error Creating Task!"); console.log(error.status);}});
-          a++;
+
         }
 
       }
 
       else if (name === "done-btn") {
-        e.preventDefault();
         const compList = main.querySelector('[data-name="completed-list"]');
         var q = e.target.parentElement.parentElement;
+        var col = e.target.parentElement.parentElement.style.background;
+        var date = e.target.parentElement.childNodes[1].value;
+        var desc= e.target.parentElement.parentElement.childNodes[5].innerHTML;
+        var titl = e.target.parentElement.parentElement.childNodes[1].innerHTML;
         var id = q.id;
-        compList.insertAdjacentHTML("beforeend", q);
+        const qq = `
+           <div
+           id="${id}"
+           draggable="true"
+           class="habitinput"
+           style="
+             height:auto;
+             width:100%;
+             padding:20px;
+             color:white;
+             margin-bottom:20px;
+             border:none;
+             background:${col};">
+         <div class="habitinput"
+         id = "title"
+         style="
+           height:auto;
+           width:50%;
+           padding:5px;
+           color:white;
+           text-decoration: strikethrough;
+           border:none;
+           margin-bottom:20px;
+           background:#0c4746;
+           box-shadow:3px 3px 7px #000;">${titl}</div>
+           <div class="habitinput"
+           name="remove-btn"
+           style="
+             height:25px;
+             width:25px;
+             padding:5px;
+             color:white;
+             border:none;
+             background:green;
+             float:right;
+             cursor:pointer;
+             margin-top:-50px;
+             box-shadow:3px 3px 7px #000;">X</div>
+         <div className="habitinput"
+         id="desc"
+         style="
+           height:auto;
+           width:100%;
+           padding:5px;
+           color:white;
+           margin-bottom:20px;
+           border:none;
+           background:transparent;
+           text-align:left;
+           text-shadow:1px 1px 2px black;">${desc}</div>
+         <div className="habitinput"
+         style="
+           height:auto;
+           width:100%;
+           padding:5px;
+           color:white;
+           margin-bottom:20px;
+           border:none;
+           background:#000;
+           text-align:left;
+           border-radius: 10px;
+         ">
+        Scheduled on: ${date}
+
+
+                  </div>
+         </div>`;
+        compList.insertAdjacentHTML("beforeend", qq);
         q.remove();
-        window.location.reload();
 
         const dd = {
           task: {
@@ -314,7 +392,8 @@ class Task1 extends React.Component{
        }
 
         else if (name === "edit-btn")
-        { var id = e.target.parentElement.parentElement.id;
+        { e.preventDefault();
+          var id = e.target.parentElement.parentElement.id;
           var date = e.target.parentElement.childNodes[1].value;
           var desc= e.target.parentElement.parentElement.childNodes[5].innerHTML;
           var titl = e.target.parentElement.parentElement.childNodes[1].innerHTML;
@@ -409,10 +488,11 @@ backgroundImage:"url('https://images.pexels.com/photos/1072179/pexels-photo-1072
 
        <div className="chbox cha">
          <div className="chcolumn">
-           <div className="chtext-wrapper" data-name="completed-list" style={{textAlign:"center"}}>
+           <div className="chtext-wrapper"  style={{textAlign:"center"}}>
            <a style={{background:"transparent", color:"#befc62", paddingLeft:"70px", paddingRight:"70px", paddingTop:"10px", paddingBottom:"10px",
             width:"95%", textShadow:"0px 0px 4px #caff75", borderRadius:"10px", fontWeight:"bold", textAlign:"center", fontFamily:"'Papyrus', Fantasy", fontSize:"19px"}}>Completed Tasks</a>
-            <br/>
+            <br/><br/>
+            <ul data-name="completed-list"></ul>
 </div>
 </div>
 </div>
